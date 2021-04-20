@@ -17,5 +17,9 @@ namespace TechEquip.Areas.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Store()
+        {
+            return View();
+        }
     }
 }

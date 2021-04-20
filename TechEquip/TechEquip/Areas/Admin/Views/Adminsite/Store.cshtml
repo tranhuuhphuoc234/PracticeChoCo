@@ -1,0 +1,261 @@
+﻿
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Areas/Admin/Views/Shared/AdminPage.cshtml";
+}
+<style>
+    .Name {
+        width: 386px;
+        border-bottom: 2px solid #2C2A2A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-top: 10px;
+    }
+
+    .Category {
+        width: 386px;
+        border-bottom: 2px solid #2C2A2A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: none;
+        margin-top: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .Price {
+        width: 386px;
+        border-bottom: 2px solid #2C2A2A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: none;
+        margin-top: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .Img {
+        width: 386px;
+        border-bottom: 2px solid #2C2A2A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: none;
+        margin-top: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .Description {
+        width: 386px;
+        border-bottom: 2px solid #2C2A2A;
+        height: 239px;
+        border-radius: 13px;
+        background: none;
+        margin-top: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    form {
+        background: none;
+    }
+
+    h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        background: none;
+        color: #2C2A2A;
+    }
+
+        h2::after {
+            content: '';
+            bottom: 0;
+            width: 62px;
+            height: 3px;
+            background: #2C2A2A;
+            display: block;
+        }
+
+
+    .btn-add {
+        width: 175px;
+        height: 44px;
+        border: none;
+        border-radius: 22px;
+        background: #373434;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    option {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .righside {
+        width: 822px;
+        height: 623px;
+        background: white;
+        border-radius: 21px;
+        position: absolute;
+        top: 11px;
+        right: 12px;
+    }
+
+    .headtable {
+        width: 797px;
+        height: 50px;
+        border-radius: 8px;
+        padding: 0;
+        background: #EBABAB;
+    }
+
+        .headtable ul li {
+            display: inline-block;
+            background: none;
+            border-radius: 8px;
+            padding: 0;
+            margin: 0 50px 0 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .headtable ul {
+            background: none;
+        }
+
+    .bodytable {
+        width: 797px;
+        height: 540px;
+        background: white;
+        margin-top: 5px;
+        border-radius: 8px;
+        padding: 0;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .tablerow {
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        width: 707px;
+    }
+
+        .tablerow ul li {
+            display: inline-block;
+            background: none;
+            border-radius: 8px;
+            padding: 0;
+            margin: 0 20px 0 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 10px;
+        }
+
+        .tablerow ul {
+            padding: 0;
+            background: none;
+        }
+
+    .btn-Del {
+        background: #EBABAB;
+        padding: 5px;
+        border-radius: 5px;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+        cursor: pointer
+    }
+
+    .btn-Edit {
+        background: #EBABAB;
+        padding: 5px;
+        border-radius: 5px;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    table {
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        transition: 0.5s;
+    }
+
+        table:hover {
+            background: #FFDFDF;
+            cursor: pointer;
+        }
+
+    table {
+        margin-top: 10px;
+    }
+
+        table tr td {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 13px;
+        }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: lightblue;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #EBABAB;
+        border-radius: 20px;
+        height: 100px;
+    }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to right, #1093ff, #83d1e9);
+        }
+</style>
+<h2>Store</h2>
+<form>
+    <input type="text" class="Name" name="Name" placeholder="Name" value="" />
+    <br />
+    <input type="text" class="Name" name="Address" placeholder="Address" value="" />
+    <br />
+    <input class="Price" type="text" name="Price" placeholder="Phone" value="" />
+    <br />
+    <input class="Price" type="text" name="Price" placeholder="Email" value="" />
+    <br />
+    <textarea class="Description" placeholder="Description"></textarea>
+    <br />
+    <input class="btn-add" type="submit" value="Add Store" />
+</form>
+<div class="righside">
+    <div class="headtable">
+        <ul>
+            <li>Name</li>
+            <li>Address</li>
+            <li>Phone</li>
+            <li>Email</li>
+            <li>Description</li>
+            <li>Action</li>
+        </ul>
+    </div>
+    <div class="bodytable">
+        <table style="width:100%">
+            <tr>
+                <td>Store1</td>
+                <td>Củ Chi, TP HCM</td>
+                <td>0966859481</td>
+                <td>phuoc@gmail.com</td>
+                <td>Sang Đẹp</td>
+                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+
