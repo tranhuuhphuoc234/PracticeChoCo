@@ -68,14 +68,14 @@
         color: #2C2A2A;
     }
 
-        h2::after {
+    h2::after {
             content: '';
             bottom: 0;
             width: 92px;
             height: 3px;
             background: #2C2A2A;
             display: block;
-        }
+    }
 
 
     .btn-add {
@@ -104,25 +104,17 @@
     }
 
     .headtable {
+        padding: 0px;
         width: 797px;
-        height: 50px;
         border-radius: 8px;
         padding: 0;
         background: #EBABAB;
     }
 
-        .headtable ul li {
-            display: inline-block;
-            background: none;
-            border-radius: 8px;
-            padding: 0;
-            margin: 0 50px 0 20px;
-            font-family: 'Source Sans Pro', sans-serif;
-        }
+    .headtable2 {
+        padding: 0px;
+    }
 
-        .headtable ul {
-            background: none;
-        }
 
     .bodytable {
         width: 797px;
@@ -135,69 +127,69 @@
         overflow-x: hidden;
     }
 
-    .tablerow {
-        border-radius: 8px;
-        background: white;
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-        width: 707px;
-    }
 
-        .tablerow ul li {
-            display: inline-block;
-            background: none;
-            border-radius: 8px;
-            padding: 0;
-            margin: 0 30px 0 20px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 10px;
-        }
-
-        .tablerow ul {
-            padding: 0;
-            background: none;
-        }
 
     .btn-Del {
         background: #EBABAB;
-        padding: 5px;
         border-radius: 5px;
-        list-style-type: none;
-        text-decoration: none;
+        padding: 0px;
         color: black;
-        cursor: pointer
+        cursor: pointer;
+        height: 38px;
+        width: 38px;
+        border: none;
+        transition: 0.5s;
+        margin-right: 10px;
+    }
+
+    .btn-Del:hover {
+            background: #f17777;
+    }
+
+    img {
+        padding: 0px;
     }
 
     .btn-Edit {
         background: #EBABAB;
-        padding: 5px;
         border-radius: 5px;
-        list-style-type: none;
-        text-decoration: none;
+        padding: 0px;
         color: black;
-        margin-left: 10px;
         cursor: pointer;
+        height: 38px;
+        width: 38px;
+        border: none;
+        transition: 0.5s;
     }
 
-    table {
+    .btn-Edit:hover {
+            background: #f17777;
+    }
+
+    .tablerow {
         background: white;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         border-radius: 8px;
         transition: 0.5s;
+        padding: 0px;
+        left: 0px;
+        text-align: left;
     }
 
-    table {
+    .tablerow:hover {
+        background: #FFDFDF;
+        cursor: pointer;
+    }
+
+    .tablerow {
         margin-top: 10px;
+        text-align: left;
     }
 
-        table:hover {
-            background: #FFDFDF;
-            cursor: pointer;
-        }
-
-        table tr td {
+    .tablerow tr td {
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 13px;
-        }
+    }
 
     ::-webkit-scrollbar {
         width: 2px;
@@ -213,9 +205,9 @@
         height: 100px;
     }
 
-        ::-webkit-scrollbar-thumb:hover {
+    ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(to right, #1093ff, #83d1e9);
-        }
+    }
 </style>
 <h2>Product</h2>
 <form>
@@ -237,64 +229,26 @@
 </form>
 <div class="righside">
     <div class="headtable">
-        <ul>
-            <li>Name</li>
-            <li>Category</li>
-            <li>Price</li>
-            <li>Image</li>
-            <li>Description</li>
-            <li>Action</li>
-        </ul>
+        <table class="headtable2" style="width:100%">
+            <tr>
+                <td style="max-width:40px;">Name</td>
+                <td style="max-width:51px;">Category</td>
+                <td style="max-width:60px;">Price</td>
+                <td style="max-width:58px;">Img</td>
+                <td style="max-width:100px;">Description</td>
+                <td style="max-width:60px;">Action</td>
+            </tr>
+        </table>
     </div>
     <div class="bodytable">
-        <table style="width:100%">
+        <table class="tablerow" style="width:100%">
             <tr>
-                <td>Bàn Phím Cơ</td>
-                <td>Phụ Kiện</td>
-                <td>2.000.000</td>
-                <td><img src="#" alt="Alternate Text" /></td>
-                <td>Chơi Phê</td>
-                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td>Bàn Phím Cơ</td>
-                <td>Phụ Kiện</td>
-                <td>2.000.000</td>
-                <td><img src="#" alt="Alternate Text" /></td>
-                <td>Chơi Phê</td>
-                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td>Bàn Phím Cơ</td>
-                <td>Phụ Kiện</td>
-                <td>2.000.000</td>
-                <td><img src="#" alt="Alternate Text" /></td>
-                <td>Chơi Phê</td>
-                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td>Bàn Phím Cơ</td>
-                <td>Phụ Kiện</td>
-                <td>2.000.000</td>
-                <td><img src="#" alt="Alternate Text" /></td>
-                <td>Chơi Phê</td>
-                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td>Bàn Phím Cơ</td>
-                <td>Phụ Kiện</td>
-                <td>2.000.000</td>
-                <td><img src="#" alt="Alternate Text" /></td>
-                <td>Chơi Phê</td>
-                <td><a class="btn-Del" href="#">Delelte</a><a class="btn-Edit" href="#">Edit</a></td>
+                <td style="max-width:40px;">Bàn Phím Cơ</td>
+                <td style="max-width:51px;">Phụ Kiện</td>
+                <td style="max-width:55px;">2.000.000</td>
+                <td style="max-width:58px;"><img src="#" alt="Alternate Text"/></td>
+                <td style="max-width:100px;">Gõ Phê Vãi Lồn</td>
+                <td style="max-width:60px;"><button class="btn-Del"><img width="20" src="~/Areas/Admin/Upload/Icon/icondelete.ico" alt="Alternate Text" /></button><button class="btn-Edit"><img width="20" src="~/Areas/Admin/Upload/Icon/iconedit.ico" alt="Alternate Text" /></button></td>
             </tr>
         </table>
     </div>
