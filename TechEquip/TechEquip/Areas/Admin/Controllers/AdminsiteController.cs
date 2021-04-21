@@ -36,7 +36,7 @@ namespace TechEquip.Areas.Admin.Controllers
             pv.price = double.Parse(Request.Form["Price"]);
             pv.id_category = int.Parse(Request.Form["Category_id"]);
             pv.active = Request.Form["Active"].Equals("on") ? true : false;
-            string pathUpload = Server.MapPath("~/Areas/Upload/") + pv.name_image;
+            string pathUpload = Server.MapPath("~/Areas/Admin/Upload/") + pv.name_image;
             Img.SaveAs(pathUpload);
             Models.Product_Bussiness pb = new Models.Product_Bussiness();
             pb.Cretae(pv);

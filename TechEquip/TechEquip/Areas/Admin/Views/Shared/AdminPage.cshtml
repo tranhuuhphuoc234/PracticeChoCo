@@ -12,6 +12,7 @@
             margin: 0;
             box-sizing: border-box;
         }
+
         body {
             background: #EBABAB;
         }
@@ -80,9 +81,9 @@
             border-radius: 50%;
             border: solid 5px #EBABAB;
             background: white;
-            margin-left:44px;
+            margin-left: 44px;
         }
-        
+
 
         .teamname {
             font-family: 'Source Sans Pro', sans-serif;
@@ -177,5 +178,8 @@
         </div>
 
     </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("script_admin", required: false)
 </body>
 </html>
